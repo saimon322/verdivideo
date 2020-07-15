@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("Arimo", "../fonts/Arimo/Arimo-Regular", 400);
+@include font-face("Arimo", "../fonts/Arimo/Arimo-Italic", 400, italic);
+@include font-face("Arimo", "../fonts/Arimo/Arimo-Bold", 700);
+@include font-face("Arimo", "../fonts/Arimo/Arimo-BoldItalic", 700, italic);

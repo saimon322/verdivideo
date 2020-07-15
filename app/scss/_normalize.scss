@@ -1,0 +1,141 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block
+}
+
+body {
+  text-align: left;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: normal;
+  min-width: 320px;
+  color: $black;
+  overflow-x: hidden;
+  position: relative;
+  font-family: $font;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  &.overflow {
+    overflow: hidden;
+  }
+  @include media-down(md) {
+    font-family: $font-mobile;
+  }
+}
+
+main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+ul, ol {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+a, a:focus, a:active, input, button, select, .slick-slide {
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 140%;
+  margin-bottom: 30px;
+  color: $black1;
+  @include media-down(lg) {
+    font-size: 36px;
+    line-height: 41px;
+  }
+  @include media-down(sm) {
+    width: 100%;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 30px;
+  color: $black2;
+  @include media-down(lg) {
+    font-size: 36px;
+    line-height: 41px;
+  }
+  @include media-down(sm) {
+    width: 100%;
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  color: $black;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden { 
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}

@@ -1,0 +1,216 @@
+.header {
+  height: 80px;
+  position: relative;
+  z-index: 100;
+  @include media-down(xs) {
+    height: 70px;
+  }
+
+  &__inner {
+    height: 80px;
+    padding: 20px 0;
+    @include media-down(xs) {
+      height: 70px;
+      padding: 15px 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-only(lg) {max-width: 944px;}
+  }
+
+  &-logo {
+    display: block;
+    width: 166px; height: 40px;
+    svg {
+      width: 100%; height: 100%;
+    }
+  }
+
+  &-nav {
+    @include media-down(lg) {display: none;}
+    &__list {
+      display: flex;
+    }
+    li {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      font-size: 15px;
+      color: $gray;
+      position: relative;
+      &:hover {
+        color: $blue;
+      }
+    }
+    .current-menu-item{
+      position: relative;
+      a {color: $blue;}
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        display: block;
+        width: 100%; height: 1px;
+        border-radius: 1px;
+        background: $blue;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &-phones {
+    margin-right: 38px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include media-down(xs) {display: none;}
+    &__arrow {
+      display: block;
+      cursor: pointer;
+      width: 15px; 
+      height: 15px;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("/wp-content/themes/twentytwenty/html/img/svg/arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: .25s ease;
+    }
+    &.show {
+      .header-phones__arrow {
+        transform: translateY(-50%) rotate(180deg);
+      }
+      .header-phone--hidden {
+        opacity: 1;
+        visibility: visible;
+        height: 17px;
+        margin-top: 5px;
+      }
+    }
+  }
+  &-phone {
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    svg {margin-right: 8px;}
+    &:hover {
+      text-decoration: none;
+      svg path {stroke: $blue;}
+    }
+    &--hidden {
+      opacity: 0;
+      transition: .25s ease;
+      visibility: hidden;
+      height: 0;
+    }
+  }
+
+  &-basket {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none !important;
+    margin-right: 22px;
+    position: relative;
+    &:hover svg path {stroke: $blue;}
+    transition: .4s .3s ease;
+    &__count {
+      margin-left: 5px;
+      font-size: 10px;
+      line-height: 12px;
+      border-radius: 50%;
+      padding: 2px 5px;
+      background: $blue;
+      color: #ffffff;
+    }
+    &.active {
+      opacity: 0;
+      transition: .5s ease;
+    }
+  }
+
+  .hamburger {
+    width: 20px; height: 20px;
+    position: relative;
+    cursor: pointer;
+    &:hover span {
+      &, &:before, &:after {
+        background: $blue;
+      }
+    }
+    span {
+      &, &:before, &:after {
+        display: block;
+        width: 15px; height: 2px;
+        border-radius: 2px;
+        background: $black;
+        position: absolute;
+        left: 2.5px;
+        top: 4px;
+        transition: top .3s ease, transform .3s ease;
+      }
+      &:before, &:after {
+        content: '';
+        left: 0;
+      }
+      &:before {
+        top: 5px;
+      }
+      &:after {
+        top: 10px;
+      }
+    }
+    &.active span {
+      transform: rotate(45deg);
+      top: 9px;
+      &:before, &:after {
+        transform: rotate(90deg);
+        top: 0;
+      }
+    }
+  }
+}
+  
+.header.is-fixed {
+  .header__inner {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(5,5,5,0.15);
+    animation: showTopMenu 0.7s;
+    height: 60px;
+    padding: 10px 0;
+  }
+  .header-nav .current-menu-item:after {
+    bottom: -18px;
+  }
+}
+
+@keyframes showTopMenu {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

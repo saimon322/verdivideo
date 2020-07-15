@@ -1,0 +1,42 @@
+{
+  "name": "optimizedhtml",
+  "version": "4.0.0",
+  "description": "OptimizedHTML 4 - Start HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "start_client": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WebDesign Master",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.14.0"
+  },
+  "dependencies": {
+    "css-vars-ponyfill": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "jquery-waypoints": "^2.0.5",
+    "npm-check-updates": "^3.2.2",
+    "object-fit-images": "^3.2.4",
+    "polymer-image-mask": "^3.0.0",
+    "video.js": "^7.6.6",
+    "waypoint": "^0.2.8",
+    "waypoints": "^4.0.1",
+    "express": "^4.17.1"
+  }
+}

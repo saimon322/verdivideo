@@ -1,0 +1,30 @@
+// Mixins
+@import "_mixins/breakpoint";
+@import "_mixins/font-face";
+
+// Global styles
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "normalize";
+@import "my-style";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/owl-carousel";
+@import "blocks/buttons";
+@import "blocks/modals";
+@import "blocks/basket";
+@import "blocks/sub-header";
+@import "blocks/articles";
+@import "blocks/categories";
+@import "blocks/products";
+
+// Pages
+@import "pages/contacts-page";
+@import "pages/faq-page";
+@import "pages/main-page";
+@import "pages/product-page";
+@import "pages/spec-page";
+@import "pages/text-page";
