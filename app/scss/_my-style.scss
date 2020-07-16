@@ -1,15 +1,23 @@
 body.no-scroll {
 	overflow: hidden;
-	padding-right: 8px;
+
+	@include media-up(xl) {
+		padding-right: 8px;
+	}
 }
 
 body.no-scroll .header.is-fixed .header__inner {
 	box-shadow: none;
-	padding-right: 8px;
+
+	@include media-up(xl) {
+		padding-right: 8px;
+	}
 }
 
 body.no-scroll .header.is-fixed .hamburger-content {
-	padding-right: 8px;
+	@include media-up(xl) {
+		padding-right: 8px;
+	}
 }
 
 a {
