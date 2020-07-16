@@ -28,6 +28,26 @@ $(document).ready(function () {
       $('body').removeClass('no-scroll');
       $('.hamburger').removeClass('active');
     }
+
+    if (!$(event.target).closest('.plan-feature, .plan-feature__btn').length) {
+      $('.plan-feature').removeClass('bordered');
+      $('.plan-feature__description').hide();
+    }
+  });
+
+  // Tarrifs Description
+  $('.plan-feature').each(function (index, item) {
+    var $this = $(item);
+    $this.on('click', '.plan-feature__btn', function (e) {
+      e.preventDefault();
+      $this.find('.plan-feature__description').toggle();
+      $this.toggleClass('bordered');
+      $('.plan-feature')
+        .not($this)
+        .removeClass('bordered')
+        .find('.plan-feature__description')
+        .hide();
+    });
   });
 
   // Header phones dropdown
