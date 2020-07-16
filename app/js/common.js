@@ -29,7 +29,10 @@ $(document).ready(function () {
       $('.hamburger').removeClass('active');
     }
 
-    if (!$(event.target).closest('.plan-feature, .plan-feature__btn').length) {
+    if (
+      !$(event.target).closest('.plan-feature.bordered, .plan-feature.bordered .plan-feature__btn')
+        .length
+    ) {
       $('.plan-feature').removeClass('bordered');
       $('.plan-feature__description').hide();
     }
