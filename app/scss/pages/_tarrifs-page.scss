@@ -1,0 +1,185 @@
+.tarrifs {
+	.page-wrapper {
+		padding-top: 0;
+	}
+
+	&-list {
+		position: relative;
+		top: -80px;
+		display: flex;
+		align-items: flex-start;
+
+		&__item {
+			background-color: #fff;
+			box-shadow: 0px 20px 60px rgba(32, 60, 96, 0.08);
+			border-radius: 20px;
+			width: 200px;
+			display: flex;
+			flex-direction: column;
+
+			&:not(:first-child) {
+				margin-left: 40px;
+			}
+
+			&-header {
+				padding: 40px 30px 0;
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+
+				h2 {
+					font-size: 18px;
+					line-height: 21px;
+					font-weight: bold;
+					color: $black2;
+					margin-bottom: 28px;
+					min-height: 42px;
+				}
+
+				.btn {
+					width: 100%;
+					justify-content: center;
+				}
+			}
+
+			&-price {
+				min-height: 59px;
+				margin-bottom: 39px;
+				font-size: 24px;
+
+				.per-month {
+					color: $blue;
+				}
+
+				.per-year {
+					color: $black2;
+				}
+
+				&>span {
+					display: inline-block;
+
+					&:not(:first-child) {
+						margin-top: 5px;
+					}
+
+					&>span {
+						font-size: 16px;
+					}
+				}
+			}
+
+			&-body {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&-desc {
+		p {
+			font-size: 13px;
+			line-height: 19px;
+			color: $black2;
+		}
+
+		.star {
+			color: $blue;
+		}
+
+		.muted {
+			color: #888888;
+		}
+	}
+}
+
+.plan-feature {
+	position: relative;
+	padding: 25px 30px;
+
+	&.bordered {
+		border-radius: 20px 20px 0 0;
+		// border: 1px solid $blue;
+		box-shadow: 0 0 0 1px $blue;
+		border-bottom: none;
+		z-index: 10;
+
+		.plan-feature__btn {
+			svg {
+				path {
+					stroke: $blue;
+				}
+			}
+		}
+	}
+
+	&:last-child {
+		padding-bottom: 30px;
+	}
+
+	&:not(:first-child) {
+
+		// border-top: 1px solid #f0f0f0;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 1px;
+			background-color: #f0f0f0;
+			top: 0;
+			left: 30px;
+			right: 30px;
+		}
+	}
+
+	&__header {
+		padding-right: 18px;
+		position: relative;
+
+		h3 {
+			font-size: 15px;
+			line-height: 21px;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: $black2;
+		}
+	}
+
+	&__text {
+		p {
+			margin: 0;
+			color: $gray;
+			font-size: 15px;
+			line-height: 21px;
+		}
+	}
+
+	&__description {
+		display: none;
+		font-size: 15px;
+		line-height: 21px;
+		position: absolute;
+		top: calc(100% + 10px);
+		left: -31px;
+		right: -31px;
+		padding: 0 30px 30px;
+		background-color: #fff;
+		border: 1px solid $blue;
+		border-top: none;
+		border-radius: 0 0 20px 20px;
+		box-shadow: 0px 50px 50px rgba(32, 60, 96, 0.2);
+	}
+
+	&__btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+
+		svg {
+			path {
+				stroke: #888AAF;
+			}
+		}
+	}
+}
