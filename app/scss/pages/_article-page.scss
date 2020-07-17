@@ -8,6 +8,7 @@
 				@include media-down(xs) {
 					padding-bottom: 0;
 					padding-top: 50px;
+					display: flex;
 				}
 			}
 		}
