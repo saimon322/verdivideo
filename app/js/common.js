@@ -54,14 +54,6 @@ $(document).ready(function () {
     });
   });
 
-  // if ($('.tarrifs-list').length) {
-  //   $('.tarrifs-list').owlCarousel({
-  //     autoWidth: true,
-  //     margin: 40,
-  //     dots: false,
-  //   });
-  // }
-
   // Header phones dropdown
   $('.header-phones__arrow').click(function () {
     $(this).parent('.header-phones').toggleClass('show');
@@ -181,7 +173,7 @@ $(document).ready(function () {
   });
 
   // Main page scripts
-  if ($('.main-page').length) {
+  if ($('.main-page').length || $('.article-page').length) {
     // Main page section slider
     var sectionOwl = $('.m-section__slider');
     sectionOwl.owlCarousel({
@@ -329,6 +321,38 @@ $(document).ready(function () {
       accordion.toggleClass('show').find('.accordion__content').slideToggle();
     });
   }
+
+  // Form
+  $('textarea').on('input', function (e) {
+    this.style.height = '1px';
+    this.style.height = this.scrollHeight + 1 + 'px';
+  });
+
+  // $('form.form').each(function (index, item) {
+  //   $(item).on('submit', function (e) {
+  //     e.preventDefault();
+  //     var contact = $(this).find('#contact');
+  //     var message = $(this).find('#message');
+
+  //     if (!contact.val()) {
+  //       contact.addClass('empty').val('Не заполнено');
+  //       contact.next().addClass('active');
+  //       $(this)
+  //         .find('[data-error="' + contact.attr('id') + '"]')
+  //         .addClass('show')
+  //         .slideDown();
+  //     }
+
+  //     if (!message.val()) {
+  //       message.addClass('empty').val('Не заполнено');
+  //       message.next().addClass('active');
+  //       $(this)
+  //         .find('[data-error="' + message.attr('id') + '"]')
+  //         .addClass('show')
+  //         .slideDown();
+  //     }
+  //   });
+  // });
 
   // ----------------------------------- END OF $(document).ready -------------------------------------
 });
