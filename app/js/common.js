@@ -29,6 +29,7 @@ $(document).ready(function () {
       $('.hamburger').removeClass('active');
     }
 
+    // Close Tarrif Descritpion Outside
     if (
       !$(event.target).closest('.plan-feature.bordered, .plan-feature.bordered .plan-feature__btn')
         .length
@@ -52,6 +53,14 @@ $(document).ready(function () {
         .hide();
     });
   });
+
+  // if ($('.tarrifs-list').length) {
+  //   $('.tarrifs-list').owlCarousel({
+  //     autoWidth: true,
+  //     margin: 40,
+  //     dots: false,
+  //   });
+  // }
 
   // Header phones dropdown
   $('.header-phones__arrow').click(function () {
