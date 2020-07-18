@@ -35,7 +35,7 @@ $(document).ready(function () {
         .length
     ) {
       $('.plan-feature').removeClass('bordered');
-      $('.plan-feature__description').fadeOut();
+      $('.plan-feature__description').fadeOut('fast');
     }
   });
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
         .not($this)
         .removeClass('bordered')
         .find('.plan-feature__description')
-        .fadeOut();
+        .fadeOut('fast');
     });
   });
 
@@ -331,32 +331,6 @@ $(document).ready(function () {
     this.style.height = '1px';
     this.style.height = this.scrollHeight + 1 + 'px';
   });
-
-  // $('form.form').each(function (index, item) {
-  //   $(item).on('submit', function (e) {
-  //     e.preventDefault();
-  //     var contact = $(this).find('#contact');
-  //     var message = $(this).find('#message');
-
-  //     if (!contact.val()) {
-  //       contact.addClass('empty').val('Не заполнено');
-  //       contact.next().addClass('active');
-  //       $(this)
-  //         .find('[data-error="' + contact.attr('id') + '"]')
-  //         .addClass('show')
-  //         .slideDown();
-  //     }
-
-  //     if (!message.val()) {
-  //       message.addClass('empty').val('Не заполнено');
-  //       message.next().addClass('active');
-  //       $(this)
-  //         .find('[data-error="' + message.attr('id') + '"]')
-  //         .addClass('show')
-  //         .slideDown();
-  //     }
-  //   });
-  // });
 
   // ----------------------------------- END OF $(document).ready -------------------------------------
 });
