@@ -35,22 +35,26 @@ $(document).ready(function () {
         .length
     ) {
       $('.plan-feature').removeClass('bordered');
-      $('.plan-feature__description').hide();
+      $('.plan-feature__description').fadeOut();
     }
   });
 
   // Tarrifs Description
+  $('.plan-feature__text').each(function (index, item) {
+    $(item).css('paddingTop', $(this).prev().outerHeight());
+  });
+
   $('.plan-feature').each(function (index, item) {
     var $this = $(item);
     $this.on('click', '.plan-feature__btn', function (e) {
       e.preventDefault();
-      $this.find('.plan-feature__description').toggle();
+      $this.find('.plan-feature__description').fadeToggle();
       $this.toggleClass('bordered');
       $('.plan-feature')
         .not($this)
         .removeClass('bordered')
         .find('.plan-feature__description')
-        .hide();
+        .fadeOut();
     });
   });
 
