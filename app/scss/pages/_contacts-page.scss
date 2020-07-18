@@ -1,0 +1,128 @@
+.contacts {
+	&-page {
+		.hero-block {
+			display: block;
+
+			h1 {
+				margin-bottom: 0;
+			}
+
+			@include media-up(lg) {
+				display: none;
+			}
+		}
+
+		.page-wrapper {
+			h1 {
+				display: none;
+
+				@include media-up(lg) {
+					display: block;
+					padding-left: 0;
+					margin-bottom: 80px;
+				}
+			}
+
+			@include media-down(sm) {
+				padding-bottom: 0;
+			}
+		}
+
+		.hamburger-info {
+			margin-bottom: 60px;
+
+			@include media-up(lg) {
+				width: 444px;
+				margin-bottom: 80px;
+				float: left;
+			}
+
+			@include media-up(xl) {
+				width: 700px;
+			}
+
+			&__item {
+				&:not(:last-child) {
+					margin-bottom: 60px;
+				}
+
+				&-link {
+					a {
+						font-size: 24px;
+
+						svg {
+							path {
+								stroke: $blue;
+							}
+						}
+					}
+				}
+
+				&-text {
+					@include media-down(sm) {
+						max-width: unset;
+					}
+				}
+			}
+		}
+
+		aside {
+			margin-bottom: 60px;
+
+			@include media-up(lg) {
+				margin-bottom: 0;
+				width: 320px;
+				float: right;
+				margin-left: 100px;
+			}
+
+			@include media-up(xl) {
+				margin-left: 140px;
+			}
+		}
+
+		form {
+			@include media-up(lg) {
+				width: 444px;
+				float: left;
+			}
+
+			@include media-up(xl) {
+				width: 700px;
+			}
+		}
+	}
+
+	&-inner {
+		@include media-up(lg) {
+
+			&::after,
+			&::before {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+	}
+}
+
+.company-info {
+	p {
+		font-size: 16px;
+		line-height: 26px;
+		color: $black;
+
+		@include media-up(sm) {
+			font-size: 18px;
+			line-height: 29px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		strong {
+			color: $black2;
+		}
+	}
+}
