@@ -1,5 +1,5 @@
-# HomeLife
-Online service with ideas what to do on quarantine at home
+# VerdiVideo
 
-# Workflow for git 
-https://buddy.works/blog/5-types-of-git-workflows
+Mockups: https://www.figma.com/file/csx2HRm2tmziPcoBcb66i0/VerdiVideo
+
+SIte: https://verdi-video.ru/wp-content/themes/twentytwenty/html/
