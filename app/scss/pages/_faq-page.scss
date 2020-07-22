@@ -1,4 +1,113 @@
 .faq {
-  
-}
 
+	&-page {
+		.page-wrapper {
+			padding-bottom: 0;
+
+			@include media-up(sm) {
+				padding-bottom: 80px;
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+
+		@include media-up(lg) {
+			flex-direction: row;
+		}
+	}
+
+	&-sidebar {
+		width: 100%;
+		margin-top: 60px;
+
+		@include media-up(sm) {
+			min-width: 320px;
+		}
+
+		@include media-up(md) {
+			border-radius: 20px;
+		}
+
+		@include media-up(lg) {
+			margin-top: 0;
+			margin-left: 50px;
+		}
+
+		@include media-up(xl) {
+			margin-left: 100px;
+		}
+	}
+
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+
+			@include media-up(md) {
+				width: calc(100% / 2 - 50px);
+			}
+
+			@include media-up(lg) {
+				width: calc(100% / 2 - 25px);
+			}
+
+			@include media-up(xl) {
+				width: calc(100% / 2 - 50px);
+			}
+
+			&:not(:first-child) {
+				margin-top: 30px;
+
+				@include media-up(md) {
+					margin-top: 0;
+				}
+			}
+
+			&:nth-child(even) {
+
+				@include media-up(md) {
+					margin-left: 100px;
+				}
+
+				@include media-up(lg) {
+					margin-left: 50px;
+				}
+
+				@include media-up(xl) {
+					margin-left: 100px;
+				}
+			}
+
+			&:nth-child(n + 3) {
+
+				@include media-up(md) {
+					margin-top: 50px;
+				}
+			}
+
+			h3,
+			p {
+				font-size: 16px;
+				line-height: 24px;
+
+				@include media-up(lg) {
+					font-size: 18px;
+					line-height: 27px;
+				}
+			}
+
+			h3 {
+				color: $black2;
+				margin-bottom: 10px;
+			}
+
+			p {
+				color: $black;
+			}
+		}
+	}
+}
