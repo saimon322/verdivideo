@@ -9,6 +9,12 @@
 }
 
 .text-page {
+	&__title {
+		@include media-up(xl) {
+			padding: 0 70px;
+		}
+	}
+	
 	h1 {
 		margin-bottom: 60px;
 		display: none;

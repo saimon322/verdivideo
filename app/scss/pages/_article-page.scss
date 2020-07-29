@@ -51,29 +51,6 @@
 			}
 		}
 
-		&>.article-top {
-			display: flex;
-			margin: 15px auto 30px;
-
-			@include media-up(lg) {
-				display: none;
-			}
-
-			h1 {
-				@include media-down(sm) {
-					font-size: 16px;
-
-					a {
-						svg {
-							margin-right: 2px;
-							width: 20px;
-							height: 20px;
-						}
-					}
-				}
-			}
-		}
-
 		@include media-down(xs) {
 			.article {
 				padding-top: 78px;
@@ -94,32 +71,12 @@
 			display: flex;
 		}
 
+		@include media-up(xl) {
+			padding: 0 70px;
+		}
+
 		h1 {
-			padding-left: 0;
 			margin-bottom: 0;
-
-			a {
-				display: flex;
-				align-items: center;
-
-				&:hover {
-					svg {
-						path {
-							stroke: $blue;
-						}
-					}
-				}
-
-				svg {
-					margin-right: 30px;
-					width: 40px;
-					height: 40px;
-
-					path {
-						stroke: $black2;
-					}
-				}
-			}
 		}
 
 		.hamburger-socials {
@@ -149,6 +106,71 @@
 							height: 100%;
 						}
 					}
+				}
+			}
+		}
+
+		&--mobile {
+			display: flex;
+			margin: 45px auto 60px;
+
+			@include media-up(lg) {
+				display: none;
+			}
+
+			@include media-down(sm) {
+				flex-direction: column;
+				justify-content: center;
+
+				h1 {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	&__back-link {
+		display: flex;
+		align-items: center;
+
+		@include media-up(xl) {
+			margin-left: -70px;
+		}
+
+		&:hover {
+			svg {
+				path {
+					stroke: $blue;
+				}
+			}
+		}
+
+		svg {
+			margin-right: 30px;
+			width: 40px;
+			height: 40px;
+
+			path {
+				stroke: $black2;
+			}
+		}
+	}
+
+	&-page &-top--mobile {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 15px auto 30px;
+
+		h1 {
+			margin-bottom: 0;
+
+			@include media-down(sm) {
+				font-size: 16px;
+				
+				svg {
+					margin-right: 2px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}

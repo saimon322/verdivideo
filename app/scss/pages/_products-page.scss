@@ -1,0 +1,158 @@
+.products-page {
+    .category {
+        &:hover .category__title::before {
+            display: none;
+        }
+    }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -80px;
+  @include media-down(md) {
+    margin-bottom: -30px;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 540px;
+  text-decoration: none !important;
+  background: linear-gradient(178deg, #FAFAFA 0.82%, #F5F5F5 99.18%);
+  border-radius: 20px;
+  transition: .25s ease;
+  margin-bottom: 80px;
+  position: relative;
+
+  @include media-up(xl) {
+    &:not(:nth-child(4n)) {
+      margin-right: 80px;
+    }
+  }
+
+  @include media-only(lg) {
+    &:not(:nth-child(3n)) {
+      margin-right: 87px;
+    }
+  }
+
+  @include media-only(md) {
+    width: 214px;
+    margin-bottom: 30px;
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @include media-only(sm) {
+    width: 255px;
+    margin-bottom: 30px;
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @include media-down(xs) {
+    width: 100%;
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  &:hover {
+    background: #fff;
+    box-shadow: 50px 50px 150px rgba(32, 60, 96, 0.1);
+    .product__price {
+      color: $blue;
+    }
+  }
+  &__logo {
+    width: 100%;
+    height: 230px;
+    @include media-down(xs) {
+      width: 230px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain;
+    }
+  }
+  &__content {
+    width: 100%;
+    padding: 20px 30px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    color: $black2;
+    height: 75px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    @include media-down(xs) {
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 150%;
+    color: #555555;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    @include media-only(md) {
+      height: 112px;
+      margin-bottom: 22px;
+    }
+    @include media-down(xs) {
+      height: auto;
+      margin-bottom: 30px;
+    }
+  }
+  &__price {
+    font-size: 18px;
+    line-height: 21px;
+    transition: .25s ease;
+    color: $black2;
+  }
+  &__sticker {
+    position: absolute;
+    top: 166px;
+    left: 30px;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--bottom {
+      top: auto;
+      left: auto;
+      bottom: 30px;
+      right: 30px;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+      img {
+        width: auto;
+        height: auto;
+        object-fit: none;
+      }
+    }
+  }
+}

@@ -7,9 +7,14 @@
   transform: translateX(100%);
   background: #ffffff;
   transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+  box-shadow: -2px 0 10px 0 rgba(5,5,5,0.15);
   overflow: hidden;
+  @include media-up(lg) {
+    right: -8px;
+  }
   &.show {
     transform: translateX(0);
+    right: 0;
   }
 
   &__header {

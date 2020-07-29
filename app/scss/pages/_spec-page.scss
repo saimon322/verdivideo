@@ -1,31 +1,50 @@
-.spec__logo {
-  width: 100%;
-  img {
+.spec {
+  &__logo {
     width: 100%;
+    min-height: 500px;
+    img {
+      width: 100%;
+      min-height: 500px;
+      object-fit: cover;
+    }
   }
-}
+  
+  &__content {
+    padding: 90px 0 80px;
 
-.spec__content {
-  padding: 90px 0;
+    @include media-down(sm) {
+      padding: 40px 0 120px;
+    }
+  }
 }
 
 .spec-item {
   margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
+
+  @include media-down(sm) {
+    display: block;
+    margin-bottom: 60px;
+  }
   
   &__title {
+    color: #000;
     font-size: 24px;
     line-height: 28px;
     margin-right: 50px;
+
+    @include media-down(sm) {
+      font-size: 20px;
+      line-height: 23px;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
   
   &__content {
-    width: 800px;
-  }
-
-  img {
-    max-width: 100%;
+    flex: 1;
+    max-width: 800px;
   }
 
   ul {
@@ -47,24 +66,34 @@
   }
 }
 
-.spec__row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  line-height: 21px;
-  &:not(:last-child){
-    margin-bottom: 30px;
+.spec-table {
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 21px;
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
   }
-}
-
-.spec__key {
-  width: 300px;
-  color: $gray3;
-}
-
-.spec__value {
-  width: 300px;
+  
+  &__key {
+    width: 300px;
+    color: $gray3;
+    @include media-down(md) {
+      width: 50%;
+    }
+  }
+  
+  &__value {
+    color: #000;
+    width: 300px;
+    @include media-down(md) {
+      width: 50%;
+      text-align: right;
+    }
+  }
 }
 
 .accordion {
@@ -74,14 +103,25 @@
 
   &:not(:last-child){
     margin-bottom: 50px;
+
+    @include media-down(sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
+    color: #000;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 24px;
     cursor: pointer;
     position: relative;
     padding-right: 34px;
+
+    @include media-down(sm) {
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 30px;
+    }
 
     &:after {
       content: '';
@@ -93,6 +133,11 @@
       background: url('../img/svg/chevron.svg') center no-repeat;
       background-size: contain;
       transition: .3s ease;
+
+      @include media-down(sm) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -101,6 +146,10 @@
     padding: 50px 0;
     border-bottom: 1px solid #F0F0F0;
     display: none;
+
+    @include media-down(sm) {
+      padding: 30px 0;
+    }
   }
 
   &:first-of-type &__content {
@@ -116,7 +165,7 @@
   }
 }
 
-.document {
+.spec-document {
   display: block;
   width: 100%;
   height: 83px;
@@ -131,6 +180,11 @@
   margin-bottom: 20px;
   transition: .25s ease;
 
+  @include media-down(xs) {
+    height: auto;
+    padding: 64px 20px 20px;
+  }
+
   &:before {
     content: '';
     width: 24px;
@@ -141,6 +195,12 @@
     top: 50%;
     transform: translateY(-50%);
     background: url('../img/svg/file.svg') center no-repeat;
+
+    @include media-down(xs) {
+      left: 20px;
+      top: 20px;
+      transform: none;
+    }
   }
 
   &:hover {
@@ -160,5 +220,18 @@
   &__size {
     font-size: 16px;
     line-height: 18px;
+    white-space: nowrap;
+
+    @include media-down(xs) {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.spec-nds {
+  @include media-down(sm) {
+    bottom: 100px;
   }
 }

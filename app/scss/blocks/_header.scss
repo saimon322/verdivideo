@@ -198,6 +198,7 @@
     animation: showTopMenu 0.7s;
     height: 60px;
     padding: 10px 0;
+    transition: box-shadow .25s ease;
   }
   .header-nav .current-menu-item:after {
     bottom: -18px;

@@ -4,7 +4,7 @@ $(document).ready(function () {
   $(".header-basket").click(function(){
     $(".header-basket").addClass("active");
     $(".basket, .overlay").addClass("show");
-    $("body").addClass("overflow");
+    $("body").addClass("no-scroll");
   })
 
   // Basket close
@@ -12,7 +12,7 @@ $(document).ready(function () {
     $(".header-basket").removeClass("active");
     $(".basket, .overlay").removeClass("show");    
     setTimeout(function(){
-      $("body").removeClass("overflow");
+      $("body").removeClass("no-scroll");
       // Basket refresh on last step
       if ($(".basket-step.active").data("step") == 5) {
         $(".basket-step").removeClass("prev active").addClass("next");

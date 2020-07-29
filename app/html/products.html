@@ -50,7 +50,7 @@
 							<a href="/wp-content/themes/twentytwenty/html/faq.html">Помощь</a>
 						</li>
 						<li>
-							<a href="#">Покупки в приложении</a>
+							<a href="/wp-content/themes/twentytwenty/html/tarrifs.html">Тарифные планы</a>
 						</li>
 						<li>
 							<a href="/wp-content/themes/twentytwenty/html/about.html">Компания</a>
@@ -86,8 +86,8 @@
 				<div class="container header__container">
 					<div class="hamburger-categories">
 						<ul class="hamburger-categories__list">
-							<li>
-								<a class="active" href="#">
+							<li class="current-menu-item">
+								<a href="#">
 									<div class="hamburger-categories__image">
 										<img src="/wp-content/themes/twentytwenty/html/img/menu-cats/cubic.jpg" alt="">
 									</div>
@@ -129,16 +129,16 @@
 							<div class="hamburger-menus">
 								<div class="hamburger-menu">
 									<ul>
-										<li><a href="#">Помощь</a></li>
-										<li><a href="#">Тарифные планы</a></li>
-										<li><a href="#">О VerdiVideo</a></li>
+										<li><a href="/wp-content/themes/twentytwenty/html/faq.html">Помощь</a></li>
+										<li><a href="/wp-content/themes/twentytwenty/html/tarrifs.html">Тарифные планы</a></li>
+										<li><a href="/wp-content/themes/twentytwenty/html/about.html">О VerdiVideo</a></li>
 									</ul>
 								</div>
 								<div class="hamburger-menu">
 									<ul>
-										<li><a href="#">Это интересно</a></li>
-										<li><a href="#">Приложение магазин</a></li>
-										<li><a href="#">Контакты и реквизиты</a></li>
+										<li><a href="/wp-content/themes/twentytwenty/html/articles.html">Это интересно</a></li>
+										<li><a href="https://app.verdi-video.ru/" target="_blank">Приложение-магазин</a></li>
+										<li><a href="/wp-content/themes/twentytwenty/html/contacts.html">Контакты и реквизиты</a></li>
 									</ul>
 								</div>
 							</div>
@@ -226,55 +226,52 @@
 	<main>
 
 		<div class="products-page">
-			<div class="sub-header">
-				<section class="categories">
-					<h2 class="visually-hidden">Категории</h2>
-					<div class="container categories__container">
-						<ul class="categories__list">
-							<li>
-								<a href="#" class="category active wow fadeInDown" data-wow-delay="0s">
-									<div class="category__logo">
-										<img src='/wp-content/themes/twentytwenty/html/img/cubic.jpg' alt="">
-									</div>
-									<div class="category__title">Кубические</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="category wow fadeInDown" data-wow-delay=".2s">
-									<div class="category__logo">
-										<img src='/wp-content/themes/twentytwenty/html/img/cylindrical.jpg' alt="">
-									</div>
-									<div class="category__title">Цилиндрические</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="category wow fadeInDown" data-wow-delay=".4s">
-									<div class="category__logo">
-										<img src='/wp-content/themes/twentytwenty/html/img/dome.jpg' alt="">
-									</div>
-									<div class="category__title">Купольные</div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="category wow fadeInDown" data-wow-delay="0.6s">
-									<div class="category__logo">
-										<img src='/wp-content/themes/twentytwenty/html/img/rotating.jpg' alt="">
-									</div>
-									<div class="category__title">Поворотные</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<!-- /categories -->
-			</div>
-			<!-- /sub-header -->
+			<section class="categories">
+				<h2 class="visually-hidden">Категории</h2>
+				<div class="container categories__container">
+					<ul class="categories__list">
+						<li>
+							<a href="#" class="category active wow fadeInDown" data-wow-delay="0s">
+								<div class="category__logo">
+									<img src='/wp-content/themes/twentytwenty/html/img/cubic.jpg' alt="">
+								</div>
+								<div class="category__title">Кубические</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="category wow fadeInDown" data-wow-delay=".2s">
+								<div class="category__logo">
+									<img src='/wp-content/themes/twentytwenty/html/img/cylindrical.jpg' alt="">
+								</div>
+								<div class="category__title">Цилиндрические</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="category wow fadeInDown" data-wow-delay=".4s">
+								<div class="category__logo">
+									<img src='/wp-content/themes/twentytwenty/html/img/dome.jpg' alt="">
+								</div>
+								<div class="category__title">Купольные</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="category wow fadeInDown" data-wow-delay="0.6s">
+								<div class="category__logo">
+									<img src='/wp-content/themes/twentytwenty/html/img/rotating.jpg' alt="">
+								</div>
+								<div class="category__title">Поворотные</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /categories -->
 
 			<div class="page-wrapper">
 				<div class="container">
 					<div class="products">
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0s">
 							<div class="product__logo">
 								<img src='/wp-content/themes/twentytwenty/html/img/gallery1.png' alt="">
 							</div>
@@ -285,8 +282,8 @@
 								<div class="product__price">3 200 ₽</div>
 							</div>
 						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.2s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.2s">
 							<div class="product__logo">
 								<img src='/wp-content/themes/twentytwenty/html/img/gallery4.png' alt="">
 							</div>
@@ -296,9 +293,54 @@
 								</div>
 								<div class="product__price">14 500 ₽</div>
 							</div>
+							<div class="product__sticker">
+								<img src="/wp-content/themes/twentytwenty/html/img/sticker1.png" alt="">
+							</div>
 						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.4s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.4s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery3.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Умная Wi-Fi камера iVideon Cute 2</div>
+								<div class="product__text">1.3 Мп, 1280х960, угол обзора 125°, функция Push-to-Talk, детекция звука и
+									движения</div>
+								<div class="product__price">32 370 ₽</div>
+							</div>
+							<div class="product__sticker">
+								<img src="/wp-content/themes/twentytwenty/html/img/sticker2.png" alt="">
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.6s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
+								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
+									движения</div>
+								<div class="product__price">7 770 ₽</div>
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
+								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
+									движения</div>
+								<div class="product__price">7 770 ₽</div>
+							</div>
+							<div class="product__sticker product__sticker--bottom">
+								<img src="/wp-content/themes/twentytwenty/html/img/sticker4.png" alt="">
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.2s">
 							<div class="product__logo">
 								<img src='/wp-content/themes/twentytwenty/html/img/gallery3.png' alt="">
 							</div>
@@ -309,80 +351,23 @@
 								<div class="product__price">32 370 ₽</div>
 							</div>
 						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.6s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.4s">
 							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery4.png' alt="">
 							</div>
 							<div class="product__content">
-								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
-								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
-									движения</div>
-								<div class="product__price">7 770 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery6.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Скоростная поворотная IP видеокамера iVideon</div>
+								<div class="product__title">Поворотная Wi-Fi камера Ivideon Dome Lite</div>
 								<div class="product__text">2 Мп, 1920х1080, угол обзора 114°, режим ночного видения, с Ethernet и Wi-Fi
 								</div>
-								<div class="product__price">32 370 ₽</div>
+								<div class="product__price">14 500 ₽</div>
+							</div>
+							<div class="product__sticker">
+								<img src="/wp-content/themes/twentytwenty/html/img/sticker3.png" alt="">
 							</div>
 						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.2s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
-								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
-									движения</div>
-								<div class="product__price">7 770 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.4s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery6.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Скоростная поворотная IP видеокамера iVideon</div>
-								<div class="product__text">2 Мп, 1920х1080, угол обзора 114°, режим ночного видения, с Ethernet и Wi-Fi
-								</div>
-								<div class="product__price">32 370 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.6s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery2.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Умная Wi-Fi камера iVideon Cute 360</div>
-								<div class="product__text">1.3 Мп, 1280х960, угол обзора 125°, функция Push-to-Talk, детекция звука и
-									движения</div>
-								<div class="product__price">2 370 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
-								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
-									движения</div>
-								<div class="product__price">7 770 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.2s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.6s">
 							<div class="product__logo">
 								<img src='/wp-content/themes/twentytwenty/html/img/gallery1.png' alt="">
 							</div>
@@ -393,20 +378,8 @@
 								<div class="product__price">3 200 ₽</div>
 							</div>
 						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.4s">
-							<div class="product__logo">
-								<img src='/wp-content/themes/twentytwenty/html/img/gallery4.png' alt="">
-							</div>
-							<div class="product__content">
-								<div class="product__title">Поворотная Wi-Fi камера Ivideon Dome Lite</div>
-								<div class="product__text">2 Мп, 1920х1080, угол обзора 114°, режим ночного видения, с Ethernet и Wi-Fi
-								</div>
-								<div class="product__price">14 500 ₽</div>
-							</div>
-						</a>
-						<a href="/wp-content/themes/twentytwenty/html/product.html" class="product wow fadeInUp"
-							data-wow-delay="0.6s">
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0s">
 							<div class="product__logo">
 								<img src='/wp-content/themes/twentytwenty/html/img/gallery3.png' alt="">
 							</div>
@@ -415,6 +388,45 @@
 								<div class="product__text">1.3 Мп, 1280х960, угол обзора 125°, функция Push-to-Talk, детекция звука и
 									движения</div>
 								<div class="product__price">32 370 ₽</div>
+							</div>
+							<div class="product__sticker">
+								<img src="/wp-content/themes/twentytwenty/html/img/sticker5.png" alt="">
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.2s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery5.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Скоростная IP видеокамера Ivideon Bullet</div>
+								<div class="product__text">2 Мп, 1920х1080, угол обзора 93°, функция Push-to-Talk, детекция звука и
+									движения</div>
+								<div class="product__price">7 770 ₽</div>
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.4s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery1.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Умная Wi-Fi камера iVideon Cute</div>
+								<div class="product__text">1.3 Мп, 1280х960, угол обзора 125°, функция Push-to-Talk, детекция звука и
+									движения</div>
+								<div class="product__price">3 200 ₽</div>
+							</div>
+						</a>
+						<a href="/wp-content/themes/twentytwenty/html/product.html" 
+							class="product wow fadeInUp" data-wow-delay="0.6s">
+							<div class="product__logo">
+								<img src='/wp-content/themes/twentytwenty/html/img/gallery4.png' alt="">
+							</div>
+							<div class="product__content">
+								<div class="product__title">Поворотная Wi-Fi камера Ivideon Dome Lite</div>
+								<div class="product__text">2 Мп, 1920х1080, угол обзора 114°, режим ночного видения, с Ethernet и Wi-Fi
+								</div>
+								<div class="product__price">14 500 ₽</div>
 							</div>
 						</a>
 					</div>
